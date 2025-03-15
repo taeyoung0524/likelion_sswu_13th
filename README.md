@@ -1,1 +1,1 @@
-# likelion_sswu_13th
+# 🦁성신여대 멋쟁이사자처럼 13th FE
