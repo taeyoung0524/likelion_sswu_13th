@@ -1,0 +1,23 @@
+
+.title{
+    color:aqua;
+}
+#id{
+    color:red;
+}
+.class{
+background-color: gray;
+}
+div{
+    font-size:large;
+    font-weight: bold;
+}
+.dad>.baby{ /*자식일때*/
+    background-color: black;
+    color:aliceblue;
+    width:500px;
+}
+.dad .son{ /*손자일때*/
+    background-color: hotpink;
+    width:50%;
+}
