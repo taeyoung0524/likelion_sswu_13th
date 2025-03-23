@@ -1,0 +1,42 @@
+.center{
+    width:1250px;
+    margin:0 auto;
+}
+header{
+    display:flex;
+}
+.left{
+    width:250px;
+    height:100px;
+    background-color: #54D8DC;
+}
+.right{
+    width:1000px;
+    height:100px;
+    background-color:#86DADC ;
+}
+main{
+    display:flex;
+}
+img{
+    width:415px;
+    height:880px;
+}
+footer{
+    display:flex;
+}
+.sc1{
+    width:250px;
+    height:100px;
+    background-color: #FDE1E0;
+}
+.top{
+    width:1000px;
+    height:50px;
+    background-color: #FECECE;
+}
+.bottom{
+    width:1000px;
+    height:50px;
+    background-color: #FDB2B5;
+}
