@@ -1,0 +1,42 @@
+.center{
+    width:1250px;
+    margin:0 auto;
+}
+
+header{
+    width:1250px;
+    height:100px;
+    background-color:#DE7D86 ;
+}
+
+.img1{
+    width:1250px;
+    height:450px;
+}
+
+.sc2{
+    display:flex;
+}
+.sc1{
+    display:flex;
+}
+.left{
+    background-color: #FFC5C5;
+    width:416px;
+    height:430px;
+}
+.middle{
+    width:416px;
+    height:430px;
+    background-color: #FFA3A3;
+}
+.right{
+    width:416px;
+    height:430px;
+    background-color:#54D8DC;
+}
+footer{
+    width:1250px;
+    height:100px;
+    background-color: #6E6875;
+}
