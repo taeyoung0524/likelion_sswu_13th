@@ -74,3 +74,22 @@ footer{
         height:50px;
     }
 }
+
+@media(max-width:450px){
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+    #img1{
+        display:none;
+    }
+    img{
+        height:340px;
+    }
+    .f_right{
+        display:none;
+    }
+    .f_left{
+        height:200px;
+    }
+}
