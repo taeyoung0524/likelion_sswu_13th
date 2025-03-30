@@ -41,3 +41,36 @@ footer{
     height:50px;
     background-color: #FDB2B5;
 }
+
+@media(max-width:680px){
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+    .h_left{
+        width:100%;
+    }
+    .h_right{
+        width:100%;
+    }
+    .image{
+        display:flex;
+        flex-direction: column;
+    }
+    img{
+        width:100%;
+        height:225px;
+    }
+    footer{
+        display:flex;
+        flex-direction: column;
+    }
+    .f_left{
+        width:100%;
+        height:100px;
+    }
+    .f_r_top, .f_r_bottom{
+        width:100%;
+        height:50px;
+    }
+}
