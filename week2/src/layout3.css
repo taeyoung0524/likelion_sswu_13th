@@ -19,7 +19,7 @@ main{
     position:relative;
 }
 .section1{
-    width:1250px;
+    width:100%;
     height:440px;
     background-color: #F5ECE1;
 }
@@ -46,7 +46,7 @@ main{
     display:flex;
 }
 footer{
-    width:1250px;
+    width:100%;
     height:100px;
     background-color: #D6CCC2;
 }

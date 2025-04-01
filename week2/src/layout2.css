@@ -90,4 +90,8 @@ footer{
         width:468px;
         height:100px;
     }
+    #img4, #img2, #img3{
+        max-width:100%;
+    }
+    
 }
