@@ -6,6 +6,114 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<script>
+    /*
+    var x=1; //재선언 가능 -> 사용 권장하지 않음
+    let y=10; //재할당 가능, 재선언 불가능
+    let h = "java";
+    const z=100; //재할당 불가능
+
+    y=100; 
+    //z=1; -> const는 재할당 불가능
+
+    var x= 10;
+    //let y= 200; 재선언 불가능 
+    
+    console.log(x + y);
+    console.log(y);
+    console.log(z);
+    console.log(h);
+    */
+
+    /*
+    let x=1;
+    let y =10;
+    let z="java";
+
+    console.log(++y);
+    console.log(y++);
+    console.log(y);
+    console.log(z);
+    */
+
+    /*
+    const arr=[100,[10,20],"java"];
+    console.log(arr[1][0]);
+    console.log(arr[0]);
+    */
+
+    /*
+    const obj={a:100, b:200, c:"java"}; // 배열과 다르게 이름으로 호출 가능
+
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+    */
+   
+   /*
+   let a=10;
+   let b=2;
+   let c="10";
+
+    console.log(a>b);
+    console.log(a<b);
+    console.log(a>=b);
+    console.log(a<=b);
+    console.log(b<c); // 문자열과 숫자를 비교해도 true 나옴 -> js 자동으로 타입 변환 해주기 때문!
+    console.log(a==c); // true가 나온다
+    console.log(a===c) // js에서 ===을 하면 타입도 봐서 true, false을 판단해준다.
+    console.log(a!=c); //false
+    console.log(a!==c); //true
+    */
+
+    /*
+    let a=10;
+    let b=2;
+    let c="10";
+
+    if(a>5 && b==2){
+        console.log("a가 5보다 크고 b는 2이다.");
+    }
+    else{
+        console.log("아니다.");
+    }
+
+    if(a<5 || b!=2){
+        console.log("a가 5보다 크거나 b는 2이다.");
+    }
+    else{
+        console.log("아니다.");
+    }
+    
+    if(undefined) -> undefined는 false처리 됨
+    */
+
+    /*
+    //삼항 연산자
+    //조건문 ? 참일 때 실행 : 거짓일 때 실행
+    const a = 100;
+    (a == 100) ? console.log("a는 100입니다") : console.log("a는 100이 아닙니다");
+    */
+
+    const a=1;
+    switch(a) { // break문을 꼭 넣어줘야 한다. 
+        case 90:
+            console.log("a는 90이다");
+            break;
+        case 100:
+            console.log("a는 100이다.");
+            break;
+        case 10:
+            console.log("a는 10이다.");
+            break;
+        default:
+            console.log("해당하는 값이 없습니다.");
+    }
+
+
+
+</script>
+
 <body>
     <div class="center">
         <header>
