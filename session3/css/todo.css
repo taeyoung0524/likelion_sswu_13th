@@ -25,22 +25,22 @@ body{
     text-align: center;
     position:relative;
 }
-.text{
+.addvalue{
     width:580px;
     height:70px;
     padding: 10px;
     outline:none;
     border:0;
 }
-#add_btn{
+#addbtn{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
     background-color: #ffffff00;
     right:15px;
-    border:0;
+    border:none;
 }
-.plus{
+#addbtn>img{
     width:30px;
     height:30px;
 }
@@ -50,16 +50,17 @@ main{
     background-color: #fff;
     margin-top:20px;
 }
-.todo_item{
+.list{
     display:flex;
     justify-content: space-between;
     position:relative;
     border-bottom:2px solid #92CAFF;
+    margin-bottom: 15px;
 }
-.todo_item>div{
+.list>div{
     display:flex;
 }
-#delete{
+button{
     border:none;
     background-color: #ffffff00;
     top:50%;
