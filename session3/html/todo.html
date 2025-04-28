@@ -23,59 +23,74 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => { 
-            const InputTodo = document.getElementById("input_Todo");
-            const Addbtn = document.getElementById("addbtn");
-            const Main = document.getElementById("main");
+            const InputTodo = document.getElementById("input_Todo"); // 사용자가 입력하는 할 일 텍스트 박스 
+            const Addbtn = document.getElementById("addbtn"); // 추가(+) 버튼 
+            const Main = document.getElementById("main"); // 할 일 목록이 표시될 영역 
 
-            let index =1;
+            let index =1; //할 일 고유 번호 관리용 index
 
-            Addbtn.addEventListener('click', () => {
-                if(InputTodo.value == ""){
+            Addbtn.addEventListener('click', () => { // 추가 버튼을 클릭했을 때때
+                if(InputTodo.value == ""){ // 입력값 검사
                     alert('내용을 입력해주세요!');
                     return;
                 }
 
-                const list = document.createElement('div');
+                const list = document.createElement('div'); 
+                // 새로운 할 일(list 항목) 만들기
+                // 할 일을 하나 감쌀 list div를 만든다
+                // list라는 클래스를 붙인다. 
                 list.classList.add('list');
 
-                const Div = document.createElement('div');
+                const Div = document.createElement('div'); 
+                // 할 일 안에 들어갈 부품 만들기 => 체크 박스와 글자를 담을 내부용 div 하나 더 만들기 
 
-                const checkBox = document.createElement('input');
+                const checkBox = document.createElement('input'); // 체크박스를 만든다 => 각각 고유한 id 부여여
                 checkBox.setAttribute('type', 'checkbox');
                 checkBox.setAttribute('id', `check${index}`)
 
-                const text=document.createElement('p');
+                const text=document.createElement('p'); // 입력한 할 일 텍스트를 p 태그로 만든다. 
                 text.textContent = InputTodo.value;
 
-                const removeBtn = document.createElement('button');
+                const removeBtn = document.createElement('button'); // 삭제 버튼을 만들고, 버튼 안에 "삭제" 이미지를 넣는다. 
                 removeBtn.innerHTML = '<img class="delete" src="../img/delete.png" alt="delete 이미지"/>';
 
-                const label = document.createElement('label');
+                const label = document.createElement('label'); 
+                // 체크박스와 연결되는 label 생성 
+                // 이 label을 클릭해도 체크박스가 체크되기 연결하는 것 
                 label.setAttribute('for', `check${index}`);
 
+                 // 삭제 버튼 기능 연결
+                 // 삭제 버튼을 누르면 -> 그 버튼이 들어 있는 할 일 항목 자체(div.list)를 삭제
                 removeBtn.addEventListener('click', (event) => {
                     event.currentTarget.parentNode.parentNode.removeChild(event.currentTarget.parentNode);
                 });
 
+                // 체크박스 기능 연결 
                 checkBox.addEventListener('change', () => {
-                    if(checkBox.checked){
-                        text.style.textDecoration='line-through';
+                    if(checkBox.checked){ // 체크박스를 체크하면 
+                        text.style.textDecoration='line-through'; //글자에 취소선(line-through) 생김김
                     }
-                    else{
-                        text.style.textDecoration='none';
+                    else{ // 체크를 풀면 
+                        text.style.textDecoration='none'; // 취소선 사라짐짐
                     }
                 });
-
+                 
+                // 부품들 조립하기 
+                // 체크박스 + 글자 + label -> Div에 담고 
                 Div.appendChild(checkBox);
                 Div.appendChild(text);
                 Div.appendChild(label);
-
+                
+                // Div + 삭제버튼 -> list에 담고 
                 list.appendChild(Div);
                 list.appendChild(removeBtn);
 
+                // list -> 메인 영역에 추가 
                 Main.appendChild(list);
-                InputTodo.value = ' ';
-                index++;
+
+                // 마무리 
+                InputTodo.value = ' '; // 입력창을 다시 비워 다음 할 일을 입력할 준비를 함함
+                index++; // index를 1 늘려서 다음 항목용 id를 준비비
             })
         })
     </script>
