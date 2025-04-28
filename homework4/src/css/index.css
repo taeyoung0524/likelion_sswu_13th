@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    width:1200px;
+    margin:0 auto;
+    font-family: 'Pretendard-Regular';
+}
+header{
+    width:1200px;
+    height:70px;
+    background-color: #444C61;
+    display:flex;
+    justify-content: space-between;
+}
+.section1{
+    width:1200px;
+    height:350px;
+    background-image: url(../assets/image92.png);
+}
+.section1>div{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section2>div, .section1{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section2{
+    width:1200px;
+    height:280px;
+    display:flex;
+}
+.section2_left{
+    background-color: #F5E4EA;
+    width:400px;
+    height:280px;
+}
+.section2_left_top{
+    height:48px;
+    width:400px;
+    border-bottom:1px solid #444C61;
+    display:flex;
+}
+.section2_left_top_left{
+    display:flex;
+    width:100px;
+    height:48px;
+    background-color:#444C61;
+    color:#F5E4EA;
+    font-weight:bold;
+    font-size:16px;
+    justify-content: center;
+    align-items: center;
+
+}
+.section2_left_top_right{
+    display:flex;
+    width:100px;
+    height:48px;
+    color:#444C61;
+    font-weight:bold;
+    font-size:16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2_center{
+    width:400px;
+    height:280px;
+    background-image: url("../assets/image180.jpg");
+}
+.section2_right{
+    width:400px;
+    height:280px;
+    background-image: url("../assets/image179.jpg");
+}
+.section2_left_bottom{
+    margin:15px 10px;
+}
+.text{
+    display:flex;
+    justify-content: space-between;
+    color:#444C61;
+    font-size:16px;
+    font-weight:lighter;
+}
+.text>p{
+    margin:11px;
+}
+#text1{
+    border-bottom:1px solid #444C61;
+}
+footer{
+    width:1200px;
+    height:100px;
+    background-color: #444C61;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section2_center>p, .section2_right>p{
+    color:white;
+    display:flex;
+    justify-content: center;
+    font-size:25px;
+    align-items: center;
+    height:280px;
+    font-family: 'Pretendard-Regular';
+}
+
+.title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:40px;
+}
+.menu{
+    color:#F5E4EA;
+    display:flex;
+    gap:100px;
+    padding-right:80px;
+    font-size:20px;
+}
+.footer_title{
+    padding-left:40px;
+}
