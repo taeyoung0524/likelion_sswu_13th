@@ -140,3 +140,32 @@ footer{
     background-color: #F5E4EA;
     color:#444C61;
 }
+.popup-title{
+    width:400px;
+    color:white;
+    display:flex;
+    align-items: center;
+    font-size:18px;
+    background-color: #444C61;
+    padding-left:15px;
+}
+.popup{
+    position:relative;
+}
+.popup-text{
+    color:#444C61;
+    font-size:14.5px;
+    padding:5px;
+    font-weight:normal;
+}
+.popup-button{
+    background-color: #444C61;
+    color:white;
+    width:80px;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    font-size:14.5px;
+    position:absolute;
+    right:0;
+}

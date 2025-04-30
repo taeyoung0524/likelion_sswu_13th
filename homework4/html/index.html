@@ -22,7 +22,7 @@
         <div class="section1"></div>
         <div class="section2">
             <div class="section2_left">
-                <div class="section2_left_top">
+                <div class="section2_left_top" id="popupTitle">
                     <div class="section2_left_top_left" id="notice">공지사항</div>
                     <div class="section2_left_top_right"  id="gallery">갤러리</div>
                 </div>
@@ -69,56 +69,121 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const notice=document.getElementById('notice');
-            const gallery=document.getElementById('gallery');
             const section=document.getElementById('section2_left_bottom');
+            const title = document.getElementById('popupTitle');
 
-            //갤러리 클릭 시 내용 변경하기 
-            gallery.addEventListener('click', () => {
-                section.innerHTML = `
-                    <div style="display:flex; justify-content:space-around;">
-                        <img src="../src/assets/image103.png" style="width:120px; height:200px;">
-                        <img src="../src/assets/image101.png" style="width:120px; height:200px;">
-                        <img src="../src/assets/image102.png" style="width:120px; height:200px;">
-                    </div>
+            // 공지사항
+            const NoticeList = () => {
+                title.innerHTML = `
+                    <div class="section2_left_top_left active-tab" id="notice">공지사항</div>
+                    <div class="section2_left_top_right inactive-tab" id="gallery">갤러리</div>
                 `;
-                // 스타일 변경 
-                gallery.classList.add('active-tab');
-                gallery.classList.remove('inactive-tab');
-                notice.classList.remove('active-tab');
-                notice.classList.add('inactive-tab');
-            });
-
-            //공지사항 클릭 시 
-            notice.addEventListener('click', () => {
                 section.innerHTML=`
-                    <div class="text">
-                        <p id="text1">(주)성신기업 한복 제작 사업 시작</p>
-                        <p>2024.04.03</p>
-                    </div>
-                    <div class="text">
-                        <p>성신여자대학교 (주)성신기업 MOU 체결</p>
-                        <p>2024.04.02</p>
-                    </div>
-                    <div class="text">
-                        <p>반품/환불 규정 공지</p>
-                        <p>2024.04.01</p>
-                    </div>
-                    <div class="text">
-                        <p>사이트를 처음 이용하시는 분들을 위해</p>
-                        <p>2024.03.12</p>
-                    </div>
-                    <div class="text">
-                        <p>지속적인 건의에 대한 답변</p>
-                        <p>2024.03.15</p>
+                    <div class="text"><p id="text1">(주)성신기업 한복 제작 사업 시작</p><p>2024.04.03</p></div>
+                    <div class="text"><p>성신여자대학교 (주)성신기업 MOU 체결</p><p>2024.04.02</p></div>
+                    <div class="text"><p>반품/환불 규정 공지</p><p>2024.04.01</p></div>
+                    <div class="text"><p>사이트를 처음 이용하시는 분들을 위해</p><p>2024.03.12</p></div>
+                    <div class="text"><p>지속적인 건의에 대한 답변</p><p>2024.03.15</p></div>
+                `;
+            };
+
+            // 팝업 
+            const Popup = () => {
+                title.innerHTML = `
+                    <div class="popup-title">(주)성신기업 한복 제작 사업 시작</div>
+                `;
+                section.innerHTML = `
+                    <div class="popup">
+                        <p class="popup-text">계약금액은 약 12억 2천만 달러, 우리 돈으로 1조 6천억 원 규모이며 공사 기간은 41개월입니다.</br></br>
+                        '파딜리 가스 증설 프로그램'은 사우디아라비아 동부 주베일시에서 약 80km 떨어진 파딜리 유전 지역 공단 내에서
+                        운영하고 있는 기존 파딜리 가스플랜트의 용량을 확대하기 위해 발주된 공사로, GS 건설은 하루 800톤 규모의 황을
+                        회수할 수 있는 황회수시설 3기를 건설하게 됩니다. 
+                        </p>
+                        <button class="popup-button" id="popup-button">닫기</button>
                     </div>
                 `;
-                // 스타일 변경
-                notice.classList.add('active-tab');
-                notice.classList.remove('inactive-tab');
-                gallery.classList.remove('active-tab');
-                gallery.classList.add('inactive-tab');
-            })
+            };
+
+            // 탭
+            const setActiveTab = (activeTab) => {
+                const notice=document.getElementById('notice');
+                const gallery=document.getElementById('gallery');
+                
+                if(!notice||!gallery) return;
+                if(activeTab==='notice') {
+                    notice.classList.add('active-tab');
+                    notice.classList.remove('inactive-tab');
+                    gallery.classList.remove('active-tab');
+                    gallery.classList.add('inactive-tab');
+                }
+                if(activeTab==='gallery'){
+                    notice.classList.remove('active-tab');
+                    notice.classList.add('inactive-tab');
+                    gallery.classList.add('active-tab');
+                    gallery.classList.remove('inactive-tab');
+                }
+            };
+
+            // text1 클릭 
+            const Text1Click = () => {
+                const text1 = document.getElementById('text1');
+                if(text1){
+                    text1.addEventListener('click', () => {
+                        Popup();
+                        setTimeout(ClosePopup(),0);
+                    })
+                }
+            };
+
+            // 팝업 닫기 
+            const ClosePopup = () => {
+                const button = document.getElementById('popup-button');
+                if(button) {
+                    button.addEventListener('click', () => {
+                        NoticeList();
+                        setActiveTab('notice');
+                        setTimeout(() => {
+                            Text1Click();
+                            TabClick();
+                        },0);
+                    })
+                }
+            };
+
+            // 탭 클릭 
+            const TabClick =() => {
+                const notice=document.getElementById('notice');
+                const gallery=document.getElementById('gallery');
+
+                if(notice){
+                    notice.addEventListener('click', () => {
+                        NoticeList();
+                        setActiveTab('notice');
+                        setTimeout(() => {
+                            Text1Click();
+                            TabClick();
+                        },0);
+                    })
+                }
+                if(gallery){
+                    gallery.addEventListener('click', () => {
+                        section.innerHTML = `
+                            <div style="display:flex; justify-content:space-around;">
+                                <img src="../src/assets/image103.png" style="width:120px; height:200px;">
+                                <img src="../src/assets/image101.png" style="width:120px; height:200px;">
+                                <img src="../src/assets/image102.png" style="width:120px; height:200px;">
+                            </div>
+                        `;
+                        setActiveTab('gallery');
+                        setTimeout(TabClick(),0);
+                    })
+                }
+            };
+            
+            //초기 실행
+            NoticeList();
+            Text1Click();
+            TabClick();
         })
     </script>
 </body>
