@@ -23,10 +23,10 @@
         <div class="section2">
             <div class="section2_left">
                 <div class="section2_left_top">
-                    <div class="section2_left_top_left">공지사항</div>
-                    <div class="section2_left_top_right">갤러리</div>
+                    <div class="section2_left_top_left" id="notice">공지사항</div>
+                    <div class="section2_left_top_right"  id="gallery">갤러리</div>
                 </div>
-                <div class="section2_left_bottom">
+                <div class="section2_left_bottom" id="section2_left_bottom">
                     <div class="text">
                         <p id="text1">(주)성신기업 한복 제작 사업 시작</p>
                         <p>2024.04.03</p>
@@ -66,5 +66,60 @@
         </div>
         <div></div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const notice=document.getElementById('notice');
+            const gallery=document.getElementById('gallery');
+            const section=document.getElementById('section2_left_bottom');
+
+            //갤러리 클릭 시 내용 변경하기 
+            gallery.addEventListener('click', () => {
+                section.innerHTML = `
+                    <div style="display:flex; justify-content:space-around;">
+                        <img src="../src/assets/image103.png" style="width:120px; height:200px;">
+                        <img src="../src/assets/image101.png" style="width:120px; height:200px;">
+                        <img src="../src/assets/image102.png" style="width:120px; height:200px;">
+                    </div>
+                `;
+                // 스타일 변경 
+                gallery.classList.add('active-tab');
+                gallery.classList.remove('inactive-tab');
+                notice.classList.remove('active-tab');
+                notice.classList.add('inactive-tab');
+            });
+
+            //공지사항 클릭 시 
+            notice.addEventListener('click', () => {
+                section.innerHTML=`
+                    <div class="text">
+                        <p id="text1">(주)성신기업 한복 제작 사업 시작</p>
+                        <p>2024.04.03</p>
+                    </div>
+                    <div class="text">
+                        <p>성신여자대학교 (주)성신기업 MOU 체결</p>
+                        <p>2024.04.02</p>
+                    </div>
+                    <div class="text">
+                        <p>반품/환불 규정 공지</p>
+                        <p>2024.04.01</p>
+                    </div>
+                    <div class="text">
+                        <p>사이트를 처음 이용하시는 분들을 위해</p>
+                        <p>2024.03.12</p>
+                    </div>
+                    <div class="text">
+                        <p>지속적인 건의에 대한 답변</p>
+                        <p>2024.03.15</p>
+                    </div>
+                `;
+                // 스타일 변경
+                notice.classList.add('active-tab');
+                notice.classList.remove('inactive-tab');
+                gallery.classList.remove('active-tab');
+                gallery.classList.add('inactive-tab');
+            })
+        })
+    </script>
 </body>
 </html>

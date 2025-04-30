@@ -130,3 +130,11 @@ footer{
 .footer_title{
     padding-left:40px;
 }
+.active-tab{
+    background-color:#444C61 ;
+    color:#F5E4EA;
+}
+.inactive-tab{
+    background-color: #F5E4EA;
+    color:#444C61;
+}
