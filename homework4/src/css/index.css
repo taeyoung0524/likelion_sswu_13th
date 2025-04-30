@@ -138,6 +138,7 @@ footer{
 }
 .menu-item{
     position:relative;
+    cursor: pointer;
 }
 .menu-item>p{
     display:flex;
@@ -163,6 +164,7 @@ ul>li:hover{
     background-color: #F5E4EA;
     color:#444C61;
     opacity: 1;
+    cursor: pointer;
 }
 .sub-menu{
     position:absolute;
