@@ -19,12 +19,16 @@ header{
 .section1{
     width:1200px;
     height:350px;
-    background-image: url(../assets/image92.png);
+    overflow:hidden;
 }
-.section1>div{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.section1-list{
+    transition: transform 0.7s ease-in-out;
+}
+.section1-image{
+    width:100%;
+    height:350px;
+    display:block;
+    object-fit: cover;
 }
 .section2>div, .section1{
     background-size: cover;
@@ -128,9 +132,46 @@ footer{
 .menu{
     color:#F5E4EA;
     display:flex;
-    gap:100px;
-    padding-right:80px;
+    justify-content: space-between;
     font-size:20px;
+    padding-right:70px;
+}
+.menu-item{
+    position:relative;
+}
+.menu-item>p{
+    display:flex;
+    justify-content: center;
+    width:150px;
+    color:#F5E4EA;
+}
+ul{
+    list-style: none;
+    height:200px;
+}
+ul>li{
+    font-size:16px;
+    height:50px;
+    display:flex;
+    background-color: #111;
+    justify-content: center;
+    opacity: 0.7;
+    align-items: center;
+    border:none;
+}
+ul>li:hover{
+    background-color: #F5E4EA;
+    color:#444C61;
+    opacity: 1;
+}
+.sub-menu{
+    position:absolute;
+    top:70%;
+    left:0;
+    color:white;
+    z-index:100;
+    width:150px;
+    padding:0;
 }
 .footer_title{
     padding-left:40px;

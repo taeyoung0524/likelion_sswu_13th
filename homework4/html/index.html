@@ -11,15 +11,53 @@
         <div class="title">
             <img src="../src/assets/HB.png">
         </div>
-        <div class="menu">
-            <p>Top</p>
-            <p>Outer</p>
-            <p>Pants</p>
-            <p>Accessory</p>
+        <div class="menu" id="menu">
+            <div class="menu-item">
+                <p>Top</p>
+                <ul class="sub-menu">
+                    <li>블라우스</li>
+                    <li>티</li>
+                    <li>셔츠</li>
+                    <li>니트</li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <p>Outer</p>
+                <ul class="sub-menu">
+                    <li>자켓</li>
+                    <li>코트</li>
+                    <li>가디건</li>
+                    <li>머플러</li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <p>Pants</p>
+                <ul class="sub-menu">
+                    <li>청바지</li>
+                    <li>짧은바지</li>
+                    <li>긴바지</li>
+                    <li>레깅스</li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <p>Accessory</p>
+                <ul class="sub-menu">
+                    <li>귀고리</li>
+                    <li>목걸이</li>
+                    <li>반지</li>
+                    <li>팔찌</li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
-        <div class="section1"></div>
+        <div class="section1">
+            <div class="section1-list" id="section1-list">
+                <img src="../src/assets/image92.png" class="section1-image">
+                <img src="../src/assets/image99.jpg" class="section1-image">
+                <img src="../src/assets/image100.jpg" class="section1-image">
+            </div>
+        </div>
         <div class="section2">
             <div class="section2_left">
                 <div class="section2_left_top" id="popupTitle">
@@ -184,6 +222,37 @@
             NoticeList();
             Text1Click();
             TabClick();
+        })
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const section1List=document.getElementById('section1-list');
+            const images = section1List.querySelectorAll('.section1-image');
+            const imageHeight = 350;
+            let index=0;
+
+            setInterval(() => {
+                index++;
+                if(index>=images.length){
+                    index=0;
+                }
+                section1List.style.transform = `translateY(-${index*imageHeight}px)`;
+            },3000);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems=document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                const title = item.querySelector('p');
+                const submenu = item.querySelector('.sub-menu');
+
+                submenu.style.display="none";
+
+                title.addEventListener('click', () => {
+                    const SubmenuOpen = submenu.style.display==="block";
+                    submenu.style.display = SubmenuOpen? "none" : "block";
+                });
+            });
         })
     </script>
 </body>
