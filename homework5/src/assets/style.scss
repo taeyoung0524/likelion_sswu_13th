@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color:#92CAFF;
+    font-family: 'Pretendard-Regular';
+    width:100%;
+    padding: 100px 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color:white;
+    text-align: center;
+    font-weight:bold;
+    font-size:40px;
+    padding-bottom: 30px;
+}
+.add{
+    width:600px;
+    height:70px;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input_text{
+    color:#A3A3A3;
+    border:none;
+    font-size:18px;
+    margin-left:20px;
+    outline:none;
+}
+.plus_img{
+    margin-right:20px;
+}
+.todo_container{
+    margin-top:30px;
+    width:600px;
+    background-color: white;
+    padding:15px 0;
+}
+.todo_list{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    border-bottom: 2px solid #92CAFF;
+    margin: 30px;
+}
+.checkbox{
+    width:20px;
+    height:20px;
+    margin-right:10px;
+}
+.added_text{
+    display:flex;
+    align-items: center;
+    color:#3F6181;
+    font-size:18px;
+}
+.removeImage{
+    border:none;
+    background-color: #ffffff00;
+}
