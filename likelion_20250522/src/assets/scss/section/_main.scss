@@ -1,0 +1,101 @@
+.Nav_wrap{
+    width:100%;
+    height:100px;
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    padding:40px;
+    align-items: center;
+
+    .Logo{
+        width:100px;
+        height:33.96px;
+    }
+    ul{
+        display:flex;
+        gap:20px;
+
+        li{
+            color:white;
+        }
+    }
+    .icon{
+        display:flex;
+        gap:20px;
+    }
+    img{
+        width:29px;
+        height:29px;
+    }
+}
+.Section02_wrap{
+    padding: 50px;
+    h3{
+        color:black;
+        font-size:34px;
+        font-weight:bold;
+        text-align: center;
+        margin:10px 0 20px 0;
+    }
+    ul{
+        display:flex;
+        justify-content: space-around;
+        padding:0  650px;
+        margin:30px 0;
+        font-size:18px;
+        font-weight:bold;
+    }
+    img{
+        width:345px;
+        height:460px;
+    }
+    .text1{
+        display:flex;
+        gap:20px;
+        color:#979797;
+        font-weight:bold;
+        font-size:13px;
+        margin:10px 0;
+
+    }
+    .text2{
+        font-size:16px;
+        color:black;
+        font-weight:bold;
+        margin:10px 0;
+    }
+    .price{
+        display:flex;
+        align-items: center;
+        gap:5px;
+        img{
+            width:18px;
+            height:18px;
+        }
+        p{
+            font-size:15px;
+            color:black;
+            margin:10px 0;
+        }
+    }
+    .Image-slider{
+        display:flex;
+        gap:20px;
+    }
+}
+.Section03_wrap{
+    text-align: center;
+
+    h3{
+        font-size:34px;
+        font-weight:bold;
+    }
+    .photo_container{
+        .photo{
+            img{
+                width:800px;
+                height:800px;
+            }
+        }
+        }
+    }
