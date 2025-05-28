@@ -172,5 +172,60 @@
 }
 
 .Section01_container{
+    position:relative;
+
+    .slide_text{
+        color:white;
+        position:absolute;
+        top:600px;
+        left:13.5%;
+        
+        h3{
+            font-size:60px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+        button{
+            color:white;
+            width:160px;
+            height:50px;
+            border:1px solid white;
+            border-radius:40px;
+            cursor: pointer;
+        }
+    }
+
+    .swiper {
+        position: relative !important; /* 기준 부모 설정 */
+    }
+
+    .swiper-pagination-progressbar {
+        width:1500px !important;
+        height: 3px;
+        bottom: 10px;
+        background-color: #B0B0B0 !important;
+        position:absolute !important;
+        top:800px !important;
+        left:50% !important;
+        transform: translateX(-50%) !important;
+        
+    }
+
+    .swiper-pagination-progressbar-fill {
+        background:white !important;  
+    }
+
+    .swiper-button-next {
+        color: white;
+        position:absolute !important;
+        top:800px !important;
+        right:4% !important;
+    }
+    .swiper-button-prev{
+        color: white;
+        position:absolute !important;
+        top:800px !important;
+        left:91% !important;
+    }
 
 }
