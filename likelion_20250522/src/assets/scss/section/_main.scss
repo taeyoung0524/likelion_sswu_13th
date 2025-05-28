@@ -28,9 +28,29 @@
         height:29px;
     }
 }
-.Section02_wrap{
+.Section02_container{
     padding: 50px;
     width:100%;
+
+    .button_container{
+        display:flex;
+        justify-content: center;
+        gap:50px;
+        margin:20px 0 50px 0;
+
+        button{
+            font-size:18px;
+            font-weight:bold;
+            color:#898989;
+            cursor: pointer;
+
+            &.active {
+                color: black; // 선택된 경우 검정
+                border-color: black; // 밑줄 강조
+                border-bottom:2px solid black;
+            }
+        }
+    }
     .item{
         width:350px;
     }
@@ -40,14 +60,6 @@
         font-weight:bold;
         text-align: center;
         margin:10px 0 20px 0;
-    }
-    ul{
-        display:flex;
-        justify-content: space-around;
-        padding:0  650px;
-        margin:30px 0;
-        font-size:18px;
-        font-weight:bold;
     }
     img{
         width:345px;
