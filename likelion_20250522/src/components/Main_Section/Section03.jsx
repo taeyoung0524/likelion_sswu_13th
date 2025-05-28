@@ -10,10 +10,12 @@ const Section03 = () => {
         <div className="photo">
           <img src={Sneaker} alt="" />
           <p>FILA CUSTOM STUDIO</p>
+          <button>자세히보기</button>
         </div>
         <div className="photo">
           <img src={Person} alt="" />
           <p>Pertex Life</p>
+          <button>자세히보기</button>
         </div>
       </div>
     </div>

@@ -30,6 +30,10 @@
 }
 .Section02_wrap{
     padding: 50px;
+    width:100%;
+    .item{
+        width:350px;
+    }
     h3{
         color:black;
         font-size:34px;
@@ -85,17 +89,68 @@
 }
 .Section03_wrap{
     text-align: center;
+    padding:100px; 
 
     h3{
         font-size:34px;
         font-weight:bold;
+        margin-bottom:30px;
     }
     .photo_container{
+        display:flex;
+        justify-content: space-between;
+
         .photo{
             img{
                 width:800px;
                 height:800px;
             }
+            p{
+                margin:30px;
+                font-size:34px;
+                font-weight:bold;
+            }
+            button{
+                width:160px;
+                height:50px;
+                border:1px solid #C9C9C9;
+                border-radius:50px;
+                margin-top:50px;
+                cursor:pointer;
+            }
         }
         }
     }
+
+.footer_container{
+    width:100%;
+    background-color: #eeeeee;
+    padding:40px;
+
+    .FILA_logo{
+        width:100px;
+        height:33.96px;
+        margin-top:20px;
+    }
+}
+.Section04_container{
+    position:relative;
+    padding: 50px 100px;
+    .img_container{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /* 150px 이상 크기를 가진 열을 자동으로 배치 */
+        padding:50px 0;
+        gap:10px;
+    }
+    img{
+        width:330px;
+        height:330px;
+    }
+    .logo_img{
+        width:196px;
+        height:41px;
+        position:absolute;
+        right:0;
+        margin-right:120px;
+    }
+}

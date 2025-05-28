@@ -1,6 +1,10 @@
 import React from 'react'
-import Image1 from "../../assets/img/Rectangle 135.png"
 import Heart from "../../assets/img/heart.png"
+import productData from '../../product'
+import {Swiper, SwiperSlide} from "swiper/react"
+import "swiper/css"
+
+
 const Section02 = () => {
   return (
     <div className ="Section02_wrap">
@@ -12,83 +16,33 @@ const Section02 = () => {
         <li># 페이토&샌들</li>
         <li># 인터런</li>
       </ul>
-      <div className="Image-slider">
-        <div className="item">
-          <img src={Image1} alt="" />
-          <div className="text1">
-            <p>공용</p>
-            <p>컴포트핏</p>
-            <p>라이프스타일</p>
-          </div>
-          <div className="text2">
-            <p>COLD WAVE 그래픽 프린트 냉감 티셔츠</p>
-          </div>
-          <div className="price">
-            <img src={Heart} alt="" />
-            <p>49,000원</p>
-          </div>
-        </div>
-        <div className="item">
-          <img src={Image1} alt="" />
-          <div className="text1">
-            <p>공용</p>
-            <p>컴포트핏</p>
-            <p>라이프스타일</p>
-          </div>
-          <div className="text2">
-            <p>COLD WAVE 그래픽 프린트 냉감 티셔츠</p>
-          </div>
-          <div className="price">
-            <img src={Heart} alt="" />
-            <p>49,000원</p>
-          </div>
-        </div>
-        <div className="item">
-          <img src={Image1} alt="" />
-          <div className="text1">
-            <p>공용</p>
-            <p>컴포트핏</p>
-            <p>라이프스타일</p>
-          </div>
-          <div className="text2">
-            <p>COLD WAVE 그래픽 프린트 냉감 티셔츠</p>
-          </div>
-          <div className="price">
-            <img src={Heart} alt="" />
-            <p>49,000원</p>
-          </div>
-        </div>
-        <div className="item">
-          <img src={Image1} alt="" />
-          <div className="text1">
-            <p>공용</p>
-            <p>컴포트핏</p>
-            <p>라이프스타일</p>
-          </div>
-          <div className="text2">
-            <p>COLD WAVE 그래픽 프린트 냉감 티셔츠</p>
-          </div>
-          <div className="price">
-            <img src={Heart} alt="" />
-            <p>49,000원</p>
-          </div>
-        </div>
-        <div className="item">
-          <img src={Image1} alt="" />
-          <div className="text1">
-            <p>공용</p>
-            <p>컴포트핏</p>
-            <p>라이프스타일</p>
-          </div>
-          <div className="text2">
-            <p>COLD WAVE 그래픽 프린트 냉감 티셔츠</p>
-          </div>
-          <div className="price">
-            <img src={Heart} alt="" />
-            <p>49,000원</p>
-          </div>
-        </div>
-      </div>
+      <Swiper 
+        className="mySwiper"
+        slidesPerView={5}
+        spaceBetween={10}
+      >
+        {productData.map((data, index) => {
+          return(
+            <SwiperSlide key={index}>
+              <div className="item">
+                <img src={data.img} alt="" />
+                <div className="text1">
+                  <p>{data.tag1}</p>
+                  <p>{data.tag2}</p>
+                  <p>{data.tag3}</p>
+                </div>
+                <div className="text2">
+                  <p>{data.name}</p>
+                </div>
+                <div className="price">
+                  <img src={Heart} alt="" />
+                  <p>{data.price}원</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
     </div>
   )
 }
