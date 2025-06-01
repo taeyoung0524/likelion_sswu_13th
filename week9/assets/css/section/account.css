@@ -1,0 +1,57 @@
+body{
+    background-color: #F6F6F9;
+}
+header{
+    position:absolute;
+    top:40px;
+    width:354px;
+}
+header>img{
+    width:6px;
+    height:12px;
+    margin-bottom:20px;
+}
+header>p{
+    font-size:34px;
+    font-weight: bold;
+}
+.container{
+    position: relative;
+}
+.profile{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    margin:20px 0 8px 0;
+    font-size:22px;
+    font-weight: bold;
+}
+.job{
+    font-size:16px;
+    font-weight: 400;
+}
+.box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+    width:354px;
+    background-color:white;
+}
+.icon{
+    width:24px;
+    height:24px;
+}
+.next{
+    width:6px;
+    height:14px;
+}
+.main2{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
