@@ -4,7 +4,7 @@ header{
     top:40px;
     width:354px;
 }
-header>img{
+header>a>img{
     width:6px;
     height:12px;
     margin-bottom:20px;
