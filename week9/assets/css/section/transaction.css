@@ -1,0 +1,46 @@
+.container{
+    background-color: #F8F8F9;
+    position:relative;
+}
+
+header{
+    position:absolute;
+    top:40px;
+    width:354px;
+}
+.prior_icon{
+    width:6px;
+    height:12px;
+    margin-bottom:20px;
+}
+header>p{
+    font-size:34px;
+    font-weight: bold;
+}
+.left>img{
+    width:70px;
+    height:70px;
+}
+.left{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:7px;
+    margin-bottom:20px;
+}
+.left>p{
+    font-size:17px;
+    font-weight:500;
+}
+.right>p{
+    font-size:13px;
+}
+.box{
+    display:flex;
+    border-bottom: 1px solid black;
+    margin-bottom:30px;
+}
+.main1{
+    position:absolute;
+    top:150px;
+}
