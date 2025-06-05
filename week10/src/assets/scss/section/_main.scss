@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Tenor+Sans&display=swap');
+
+.Nav {
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: #E7EAEF;
+
+    .left>img{
+        width:24px;
+        height:24px;
+    }
+    .center>img{
+        width:78px;
+        height:32px;
+    }
+    .right{
+        display:flex;
+        gap:10px;
+        img{
+            width:24px;
+            height:24px;
+        }
+    }
+}
+.Section1{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+
+    p{
+        font-family: "Bodoni Moda", serif;
+        font-size:38.66px;
+        color:#333333;
+        font-style:italic;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+
+    .Title1{
+        position:absolute;
+        left:35px;
+        top:30%;
+    }
+    .Title2{
+        position:absolute;
+        top:37%;
+        left:70px;
+    }
+    .Title3{
+        position:absolute;
+        top:44%;
+    }
+
+    button{
+        width:253px;
+        height:40px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color:white;
+        border-radius:20px;
+        font-family: "Tenor Sans", sans-serif;
+        position:absolute;
+        bottom:40px;
+    }
+}
+
+.Section2{
+    padding:20px;
+    background-color: white;
+    flex-direction: column;
+    
+    .button_container{
+        display:flex;
+        justify-content: space-around;
+        font-family: "Tenor Sans", sans-serif;
+        color:#212806;
+        font-size:14px;
+        gap:20px;
+        font-weight: 400;
+        margin:20px 0;
+    }
+    .box_container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+        img{
+            width:165px;
+            height:200px;
+            margin-bottom:10px;
+        }
+    }
+    .text_container{
+        font-family: "Tenor Sans", sans-serif;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        gap:5px;
+        margin-bottom:10px;
+
+        h3{
+            font-size:12px;
+            color:#333333;
+        }
+        p{
+            color:#DD8560;
+            font-size:15px;
+        }
+    }
+    .bottom{
+        font-family: "Tenor Sans", sans-serif; 
+        font-size:16px;
+    }
+}
+.Section3{
+    display:flex;
+    flex-direction: column;
+    .collections{
+        margin: 20px 0 10px 0;
+    }
+    .title{
+        display:flex;
+        margin:0 auto !important;
+        width:177px;
+        
+    }
+    .img1{
+        margin:30px 0;
+        width:375px;
+        height:240px;
+    }
+    .img2{
+        width:260px;
+        height:296px;
+        display:flex;
+        margin:0 auto;
+    }
+    .video{
+        width:375px;
+        height:176px;
+        margin:30px 0;
+    }
+}
+.Section4{
+    display:flex;
+    flex-direction: column;
+    padding-bottom:30px;
+
+    .img_container{
+        width:340px;
+        display:flex;
+        overflow:hidden;
+        gap:10px;
+    }
+    .box{
+        margin-top:20px;
+
+        img{
+            width:254.89px;
+            height:311.64px;
+        }
+    }
+    .text_container{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Tenor Sans", sans-serif; 
+        margin:10px 0;
+
+        h3{
+            color:#333333;
+            font-size:16px;
+            margin-bottom:10px;
+        }
+        p{
+            color:#DD8560;
+            font-size:16px;
+        }
+    }
+}
+.Section5{
+    flex-direction: column;
+    font-family: "Tenor Sans", sans-serif;
+
+    img{
+        margin: 0 auto !important;
+        width:153px;
+    }
+    .hash_container{
+        display:flex;
+        flex-wrap:wrap;
+        width: 350px;
+        gap:10px;
+        padding:20px 0;
+    }
+    .hash{
+        background-color:#F9F9F9 ;
+        color:#333333;
+        font-size: 14px;
+        width:auto;
+        padding:5px 10px;
+    }
+}
+.Section6{
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding:20px 0;
+    font-family: "Tenor Sans", sans-serif;
+
+    .Logo{
+        width:97.61px;
+        height:40px;
+        margin-bottom:20px;
+    }
+
+    h3{
+        color:#555555;
+        font-size:14px;
+        text-align: center;
+    }
+}

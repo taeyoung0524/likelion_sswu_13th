@@ -12,11 +12,21 @@ a {
 }
 
 body {
-    background-color: var(--black);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Pretendard-Regular';
+}
+
+.container{
+    display:flex;
+    margin:0 auto;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    width:375px;
+    height:auto;
 }
 
 #root {
